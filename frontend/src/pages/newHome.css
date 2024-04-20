@@ -1,0 +1,31 @@
+.home-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #333; /* Dark blue color, same as navbar */
+  }
+  
+  .heading {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    color: white; /* White color for text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for stylish appearance */
+  }
+  
+  .first-line {
+    color: rgba(27, 27, 235, 0.651); /* Aqua color for the first line */
+    margin-left: 20px; /* Adjust the margin for left alignment */
+  }
+  
+  .separator {
+    font-size: 8rem; /* Increase the font size of the separator */
+    color: white; /* White color for the separator */
+  }
+  
+  .second-line {
+    color: white; /* White color for the second line */
+    margin-right: 20px; /* Adjust the margin for right alignment */
+  }
+  
