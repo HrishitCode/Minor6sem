@@ -4,6 +4,7 @@ import { resolve, dirname } from "node:path";
 import { readdir as readDir } from "node:fs/promises";
 import restart from "vite-plugin-restart";
 import { fileURLToPath } from "url";
+import tailwindcss from 'tailwindcss'
 
 // https://vitejs.dev/config/
 
@@ -26,6 +27,11 @@ export default defineConfig(async ({ command }) => {
       resolve: {
         alias,
       },
+      css: {
+        postcss: {
+          plugins: [tailwindcss()],
+        },
+      }
     };
   }
   return {

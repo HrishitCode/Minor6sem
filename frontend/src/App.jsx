@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import IndexPage from "@pages";
 import RegisterPage from "@pages/register";
 import './App.css'
+import './index.css'
 
 function App() {
   return (
