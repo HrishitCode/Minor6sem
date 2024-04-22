@@ -5,6 +5,10 @@
     height: 100vh;
     background-color: #333; /* Dark blue color, same as navbar */
   }
+  body {
+    overflow: hidden;
+}
+
   
   .heading {
     font-size: 4rem;

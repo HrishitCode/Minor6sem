@@ -1,16 +1,18 @@
 import React from 'react';
 
 const Navbar = ({ onPageChange }) => {
-  // const { loginWithRedirect } = useAuth0(); // Commented out Auth0 part
-
-  // Function to handle navigation to Login page
+ 
   const handleLoginClick = () => {
-    onPageChange('login');
+    if (onPageChange) {
+      onPageChange('login');
+    }
   };
 
-  // Function to handle navigation to Signup page
+ 
   const handleSignupClick = () => {
-    onPageChange('signup');
+    if (onPageChange) {
+      onPageChange('signup');
+    }
   };
 
   return (

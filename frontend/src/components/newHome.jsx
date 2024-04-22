@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import chain2 from "../img/chain2.jpg";
-import Wave from '../components/Wave';
+import Wave from './Wave';
 import { titleAnimation, fade, photoAnimation } from '../animation';
 import "./newHome.css"
 import Navbar from '@components/newNavbar';
+
 
 const Layout = styled.div`
   display: flex;
