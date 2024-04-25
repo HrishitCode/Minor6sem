@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import chain2 from "../img/chain2.jpg";
 import Wave from '../components/Wave';
 import { titleAnimation, fade, photoAnimation } from '../animation';
-import "./newHome.css"
-import Navbar from '@components/newNavbar';
+import "./MainHome.css"
+import MainNavbar from '@components/MainNavbar';
 
 const Layout = styled.div`
   display: flex;
@@ -99,7 +99,7 @@ const Homepage = () => {
 
   return (
     <>
-    <Navbar />
+    <MainNavbar />
     <Layout>
       <Description style={{ zIndex: 2 }}>
         <Header
