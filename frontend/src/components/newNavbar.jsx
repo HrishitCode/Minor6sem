@@ -1,20 +1,13 @@
 import React from 'react';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = ({ onPageChange }) => {
- 
-  const handleLoginClick = () => {
-    if (onPageChange) {
-      onPageChange('login');
+  const { loginWithRedirect } = useAuth0();
+  const handleButtonClick = () => {
+    if (loginWithRedirect) {
+      loginWithRedirect();
     }
   };
-
- 
-  const handleSignupClick = () => {
-    if (onPageChange) {
-      onPageChange('signup');
-    }
-  };
-
   return (
     <nav style={{ backgroundColor: 'black', paddingTop: '0.6rem', paddingBottom: '0.6rem' }} className="flex justify-between items-center text-white p-4">
       <a 
@@ -27,7 +20,7 @@ const Navbar = ({ onPageChange }) => {
       <div className="flex space-x-10 items-center">
         <a 
           href="#_" 
-          onClick={handleLoginClick}
+          onClick={handleButtonClick}
           className="relative inline-flex items-center justify-center px-10 py-3 overflow-hidden font-mono font-semibold tracking-tighter text-white bg-transparent rounded-lg group" // Adjusted padding here
         >
           <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-900 rounded-full group-hover:w-56 group-hover:h-56"></span>
@@ -36,7 +29,7 @@ const Navbar = ({ onPageChange }) => {
         </a>
         <a 
           href="#_" 
-          onClick={handleSignupClick}
+          onClick={handleButtonClick}
           className="relative inline-flex items-center  justify-center px-10 py-3 overflow-hidden font-mono font-semibold tracking-tighter text-white bg-transparent rounded-lg group" // Adjusted padding here
           style={{ marginRight: '20px', paddingRight: '30px' }} // Add padding to the right
         >

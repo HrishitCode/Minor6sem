@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { Route, Routes, useHistory } from "react-router-dom";
+import ReactDOM from "react-dom";
+import { Route, Routes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import NewNavbar from "./components/newNavbar"; // Corrected component name
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
-import IndexPage from "@pages";
+//import IndexPage from "@pages";
 import RegisterPage from "@pages/register";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
 import Organisation from "./components/Organisation";
 import User from "./components/User";
-
+import Home from "./components/newHome"
+import IndexPage from "./pages/index"
 function App() {
   const [currentPage, setCurrentPage] = useState(null);
 
@@ -34,24 +35,15 @@ function App() {
             </>
           }
         />
-        <Route path="/test" exact element={<IndexPage />} />
+        <Route path="/user/index" exact element={<IndexPage />}></Route>
+      {/*  <Route path="/test" exact element={<IndexPage />} />  */}
         <Route path="/register" exact element={<RegisterPage />} />
-        <Route
-          path="/login"
-          exact
-          element={<Login />}
-        />
-        <Route
-          path="/signup"
-          exact
-          element={<Signup />}
-        />
         <Route
           path="/"
           exact
           element={
             <>
-              <NewNavbar /> {/* Render the NewNavbar component */}
+              <Home />
               <Carousel />
               <Organisation />
               <Footer />
